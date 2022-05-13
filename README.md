@@ -8,4 +8,4 @@
 
 ## 노션 정리
 
-[My First Nodejs Server](https://mookiemookiekun.notion.site/My-First-Nodejs-Server-d835151375c3455faf429bb50dc70ae0)
+[nodejs-study](https://mookiemookiekun.notion.site/nodejs-study-f977673b63ee4f34b7cfb05bd6944af5)
