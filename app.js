@@ -16,7 +16,9 @@ const server = http.createServer((req, res) => {
 
     if (url === '/message' && method === 'POST') {
         fs.writeFileSync('message.txt', 'DUMMy');
-        res.writeHead(302);
+        res.statusCode = 302;
+        res.setHeader('Location', '/');
+        return res.end();
     }
 
     console.log(req.url, req.method, req.headers);
