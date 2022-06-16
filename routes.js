@@ -59,4 +59,18 @@ const requestHandler = (req, res) => {
     res.end();
 };
 
-module.exports = requestHandler;
+// 1.  module.exports = requestHandler;
+
+// 2. exports many things
+// module.exports = {
+//     handler: requestHandler,
+//     someText: 'Some hard coded text',
+// };
+
+// 3. same to 2 code
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some hard coded text';
+
+// 4. short cut
+exports.handler = requestHandler;
+exports.someText = 'Some hard coded text';
