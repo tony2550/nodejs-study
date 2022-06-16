@@ -1,9 +1,19 @@
 const http = require('http');
-const routes = require('./routes');
 
-const server = http.createServer(routes.handler); // import propety from routes
+const express = require('express');
 
-console.log(routes.someText);
+const app = express();
+
+app.use((req, res, next) => {
+    console.log('In the middleware');
+    next(); // Allow the request to continue to the next middleware in line
+});
+
+app.use((req, res, next) => {
+    console.log('In another middleware');
+});
+
+const server = http.createServer(app);
 
 server.listen(8090, () => {
     console.log('Server is running');
