@@ -1,20 +1,24 @@
 {
-  "name": "nodejs-study",
-  "version": "1.0.0",
-  "description": "nodejs-app-forstudy",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tony2550/nodejs-study.git"
-  },
-  "author": "dodosam",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tony2550/nodejs-study/issues"
-  },
-  "homepage": "https://github.com/tony2550/nodejs-study#readme"
+    "name": "nodejs-study",
+    "version": "1.0.0",
+    "description": "nodejs-app-forstudy",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js",
+        "start-server": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tony2550/nodejs-study.git"
+    },
+    "author": "dodosam",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tony2550/nodejs-study/issues"
+    },
+    "homepage": "https://github.com/tony2550/nodejs-study#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    }
 }

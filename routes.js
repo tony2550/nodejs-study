@@ -1,5 +1,5 @@
 const fs = require('fs');
-// handler를 내보내기
+
 const requestHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
@@ -59,7 +59,7 @@ const requestHandler = (req, res) => {
     res.end();
 };
 
-// 1.  module.exports = requestHandler;
+module.exports = requestHandler;
 
 // 2. exports many things
 // module.exports = {
@@ -72,5 +72,5 @@ const requestHandler = (req, res) => {
 // module.exports.someText = 'Some hard coded text';
 
 // 4. short cut
-exports.handler = requestHandler;
-exports.someText = 'Some hard coded text';
+// exports.handler = requestHandler;
+// exports.someText = 'Some hard coded text';
