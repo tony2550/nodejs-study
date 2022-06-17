@@ -1,5 +1,3 @@
-const http = require('http');
-
 const express = require('express');
 
 const app = express();
@@ -11,10 +9,10 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log('In another middleware');
+    res.send('<h1>Thanks to ExpressJS!</h1>');
+    // Hooked into this funnel
 });
 
-const server = http.createServer(app);
-
-server.listen(8090, () => {
+app.listen(8090, () => {
     console.log('Server is running');
 });
