@@ -5,11 +5,11 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/', (req, res, next) => {
-    // default route
-    console.log('this always runs!');
-    next();
-});
+// app.use('/', (req, res, next) => {
+//     // default route
+//     console.log('this always runs!');
+//     next();
+// });
 
 app.use('/add-product', (req, res, next) => {
     // '/list'
@@ -19,7 +19,7 @@ app.use('/add-product', (req, res, next) => {
     );
 });
 // 인수 생략가능 app.use('/product', (req, res, next))
-app.use('/product', (req, res) => {
+app.post('/product', (req, res) => {
     console.log(req.body);
     res.redirect('/'); // response 리다이렉트ddd
 });
