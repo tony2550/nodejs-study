@@ -8,7 +8,7 @@ const shopRoutes = require('./router/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(adminRoutes); // 적용! 여기서 adminRoutes는 admin.js에서 export되는 라우터 object이다.
+app.use('/admin', adminRoutes); // 적용! 여기서 adminRoutes는 admin.js에서 export되는 라우터 object이다.
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
